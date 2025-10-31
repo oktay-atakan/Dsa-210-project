@@ -70,3 +70,4 @@ When data is ready, exploratory data anlysis (EDA) will be performed to visualiz
 
 Statistical tests will be performed to show obvious differences between games with 'great soundtrack' tag and games without it, the games whose soundtrack is popular and whose aren't, award winning or nominated soundtracks and others.
 
+Finally, regression analysis will be implied to compare all data together and answer the main research question.
