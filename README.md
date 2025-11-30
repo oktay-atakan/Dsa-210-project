@@ -53,14 +53,6 @@ User Reviews and Tags (Steam API)
 - Review count
 - 'has_great_soundtrack' tag
 
-Soundtrack Visibility (YouTube Data API)
-
-- View count of Main Theme/Original Soundtrack videos
-
-Award and Soundtrack Info (Wikipedia/VGMdb)
-
-- Existence of any award/nomination
-- Existence of Original Soundtrack
 
 Methodology
 ------------------------------------------------------
