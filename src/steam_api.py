@@ -1,5 +1,7 @@
 import requests
 import pandas as pd
+import time
+import re
 
 def get_steam_data(appid_list):
     results = []
