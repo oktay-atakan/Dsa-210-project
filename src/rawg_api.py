@@ -1,5 +1,7 @@
 import requests
 import pandas as pd
+import time
+import re
 
 def get_rawg_games(api_key, pages=10):
     games = []
