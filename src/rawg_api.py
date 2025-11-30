@@ -18,3 +18,16 @@ def get_rawg_data(api_key, pages=5):
                 "genres": ", ".join([x["name"] for x in g["genres"]])
             })
     return pd.DataFrame(games)
+
+def get_steam_id_for_rawg_game(game_id, api_key):
+    url = f"https://api.rawg.io/api/games/{game_id}?key={api_key}"
+    resp = requests.get(url).json()
+
+    try:
+        for s in resp.get("stores", []):
+            if s["store"]["name"] == "Steam":
+                return s.get("store_id")
+    except:
+        return None
+
+    return None
