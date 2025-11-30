@@ -1,33 +1,25 @@
 import requests
 import pandas as pd
 
-def get_rawg_data(api_key, pages=5):
+def get_rawg_games(api_key, pages=10):
     games = []
-    for page in range(1, pages + 1):
+    for page in range(1, pages+1):
         url = f"https://api.rawg.io/api/games?key={api_key}&dates=2015-01-01,2024-12-31&page={page}"
         resp = requests.get(url).json()
 
+        if "results" not in resp:
+            print("RAWG API hata:", resp)
+            break
+
         for g in resp["results"]:
             games.append({
-                "id": g["id"],
+                "rawg_id": g["id"],
                 "name": g["name"],
-                "released": g["released"],
+                "released": g.get("released"),
                 "metacritic": g.get("metacritic"),
-                "rating": g["rating"],
-                "ratings_count": g["ratings_count"],
+                "rating": g.get("rating"),
+                "ratings_count": g.get("ratings_count"),
                 "genres": ", ".join([x["name"] for x in g["genres"]])
             })
+        time.sleep(0.2)
     return pd.DataFrame(games)
-
-def get_steam_id_for_rawg_game(game_id, api_key):
-    url = f"https://api.rawg.io/api/games/{game_id}?key={api_key}"
-    resp = requests.get(url).json()
-
-    try:
-        for s in resp.get("stores", []):
-            if s["store"]["name"] == "Steam":
-                return s.get("store_id")
-    except:
-        return None
-
-    return None
