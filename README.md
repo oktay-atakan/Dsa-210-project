@@ -29,7 +29,9 @@ Do award-winning or nominated soundtracks correlate with higher critical recepti
 -----------------------------------------------------
 Hypothesis
 -----------------------------------------------------
-The soundtrack of a video game affects player reception and has an impact on the game reviews and game ratings.
+Null: There is no significant difference between game reviews and game ratings of video games with populer and non-populer soundtracks.
+
+Alternative: There is a significant difference between game reviews and ratings of games with popular soundtracks and non-populer soundtracks. Therefore, the soundtrack of a video game affects player reception and has an impact on the game reviews and game ratings.
 
 -----------------------------------------------------
 
