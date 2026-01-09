@@ -22,16 +22,16 @@ Sub-questions:
 
 Do games with the “Great Soundtrack” tag on Steam receive higher review scores than others?
 
-Is there a relationship between original soundtrack visibility measured by YouTube view counts and game ratings?
+Is there a relationship between price of a game and game ratings?
 
-Do award-winning or nominated soundtracks correlate with higher critical reception?
+Are there spesific game genres that has a greater possibility of having a great soundtrack, great story and an atmospheric environment?
 
 -----------------------------------------------------
 Hypothesis
 -----------------------------------------------------
-Null: There is no significant difference between game reviews and game ratings of video games with populer and non-populer soundtracks.
+Null: There is no significant difference between game ratings of video games with populer and non-populer soundtracks.
 
-Alternative: There is a significant difference between game reviews and ratings of games with popular soundtracks and non-populer soundtracks. Therefore, the soundtrack of a video game affects player reception and has an impact on the game reviews and game ratings.
+Alternative: There is a significant difference between ratings of games with popular soundtracks and non-populer soundtracks. Therefore, the soundtrack of a video game affects player reception and has an impact on the game reviews and game ratings.
 
 -----------------------------------------------------
 
@@ -52,6 +52,8 @@ User Reviews and Tags (Steam API)
 - Review score
 - Review count
 - 'has_great_soundtrack' tag
+- 'story_rich' tag
+- 'atmospheric' tag
 
 
 Methodology
