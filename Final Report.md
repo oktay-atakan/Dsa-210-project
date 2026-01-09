@@ -102,6 +102,20 @@ A positive relationship is observed between user ratings and Metacritic scores, 
 
 Overall, the exploratory analysis indicates that games with great soundtracks are generally associated with higher user and critic evaluations. The observed patterns support the use of supervised classification to further examine whether these features can jointly predict the presence of a great soundtrack.
 
+## Machine Learning Task
+
+The machine learning task in this project aims to predict whether a game has the Great Soundtrack tag using observable game-related features. Since the target variable is binary, supervised classification methods were applied.
+
+Initially, a baseline classification model was trained and evaluated using accuracy and a confusion matrix. However, the results revealed a class imbalance problem, where games without the Great Soundtrack tag dominated the dataset. This made accuracy an unreliable evaluation metric.
+
+To address this issue, class-based evaluation metrics such as precision, recall, and F1-score were adopted. In addition, class balancing techniques were applied during model training to improve performance on the minority class.
+
+Multiple models were experimented with, including Logistic Regression and Random Forest. Each model was evaluated using confusion matrices, Macro F1-score, ROC-AUC score, and log loss. Based on these comparisons, the model that achieved the most balanced performance across classes was selected as the final model.
+
+The final chosen model demonstrates that the Great Soundtrack tag can be partially predicted using game ratings, popularity indicators, and thematic tags, supporting the hypothesis that soundtrack quality is systematically related to overall game reception.
+
+All model experiments and evaluations can be found in the 'ML_task_supervised.ipynb' notebook.
+
 ## Findings
 
 ### Hyphothesis Testing Results
